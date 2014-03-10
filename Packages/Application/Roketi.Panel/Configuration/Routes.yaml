@@ -1,0 +1,8 @@
+-
+  name: 'Fallback rule'
+  uriPattern: ''
+  defaults:
+    '@package': 'Roketi.Panel'
+    '@controller': 'Standard'
+    '@action': 'index'
+    '@format': 'html'

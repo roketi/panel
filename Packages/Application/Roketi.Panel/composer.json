@@ -1,0 +1,13 @@
+{
+    "name": "roketi/panel",
+    "type": "typo3-flow-package",
+    "description": "The Roketi GUI",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Roketi\\Panel": "Classes"
+        }
+    }
+}
