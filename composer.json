@@ -1,0 +1,37 @@
+{
+	"name": "roketi/panel",
+	"description": "The central Roketi GUI, aka the control panel to manage hosting services",
+	"authors": [
+		{
+			"name": "Mario Rimann",
+			"email": "mario@rimann.org",
+			"homepage": "http://rimann.org/",
+			"role": "Lead Developer"
+		}
+	],
+	"require": {
+		"typo3/flow": "2.1.x",
+		"doctrine/migrations": "@dev",
+		"typo3/twitter-bootstrap": "*"
+	},
+	"require-dev": {
+		"typo3/kickstart": "dev-master",
+		"typo3/buildessentials": "dev-master",
+		"mikey179/vfsstream": "1.2.*",
+		"typo3/surf": "dev-master",
+		"phpunit/phpunit": "3.7.*"
+	},
+	"config": {
+		"vendor-dir": "Packages/Libraries",
+		"bin-dir": "bin"
+	},
+	"autoload": {
+		"psr-0": {
+			"Roketi\\Panel": "Packages/Application/Roketi.Panel/Classes"
+		}
+	},
+	"scripts": {
+		"post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+		"post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall"
+	}
+}
