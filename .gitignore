@@ -7,6 +7,7 @@
 /Packages/Libraries/
 /Packages/Application/TYPO3.Surf/
 /Packages/Application/TYPO3.Twitter.Bootstrap/
+/Packages/Application/Flowpack.Behat/
 /Data/
 /bin/
 /Configuration/README
@@ -16,3 +17,4 @@
 /flow.bat
 /Build/Reports/UnitTests.xml
 /Build/BuildEssentials
+/Build/Behat

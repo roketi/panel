@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6ae2b6c8651601a7f7b9ee87b222fc8b",
+    "hash": "5c6a3619b868cf6544a1db89df2334fd",
     "packages": [
         {
             "name": "composer/installers",
@@ -982,6 +982,36 @@
     ],
     "packages-dev": [
         {
+            "name": "flowpack/behat",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Flowpack/Flowpack.Behat.git",
+                "reference": "2ad799f9495093f1dad7189a6b11f62bac1e9079"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Flowpack/Flowpack.Behat/zipball/2ad799f9495093f1dad7189a6b11f62bac1e9079",
+                "reference": "2ad799f9495093f1dad7189a6b11f62bac1e9079",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/flow": "*"
+            },
+            "type": "typo3-flow-package",
+            "autoload": {
+                "psr-0": {
+                    "Flowpack\\Behat": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0+"
+            ],
+            "description": "Behat support package for TYPO3 Flow",
+            "time": "2014-01-29 15:07:38"
+        },
+        {
             "name": "mikey179/vfsStream",
             "version": "v1.2.0",
             "source": {
@@ -1457,7 +1487,8 @@
         "doctrine/migrations": 20,
         "typo3/kickstart": 20,
         "typo3/buildessentials": 20,
-        "typo3/surf": 20
+        "typo3/surf": 20,
+        "flowpack/behat": 20
     },
     "platform": [
 
