@@ -26,4 +26,35 @@ class FeatureContext extends MinkContext {
 		$this->useContext('flow', new \Flowpack\Behat\Tests\Behat\FlowContext($parameters));
 		$this->objectManager = $this->getSubcontext('flow')->getObjectManager();
 	}
+
+	/**
+	 * @Given /^I am not logged in$/
+	 */
+	public function iAmNotLoggedIn() {
+		// Do nothing, every scenario has a new session
+	}
+
+	/**
+	 * @Then /^I should see a login form$/
+	 */
+	public function iShouldSeeALoginForm() {
+		$this->assertSession()->fieldExists('username');
+		$this->assertSession()->fieldExists('password');
+	}
+	/**
+	 * @Given /^I should be logged in as "([^"]*)"$/
+	 */
+	public function iShouldBeLoggedInAs($name) {
+		$this->assertSession()->elementTextContains('css', '#user-tasks', $name);
+	}
+
+	/**
+	 * @Then /^I should not be logged in$/
+	 */
+	public function iShouldNotBeLoggedIn() {
+		if ($this->getSession()->getPage()->findButton('logout')) {
+			Assert::fail('"Logout" Button not expected');
+		}
+	}
+
 }

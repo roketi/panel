@@ -11,9 +11,16 @@ use TYPO3\Flow\Annotations as Flow;
 class StandardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 
 	/**
-	 * @return void
+	 * Just redirect the user to the dashboard
 	 */
 	public function indexAction() {
+		$this->redirect('dashboard');
+	}
+
+	/**
+	 * @return void
+	 */
+	public function dashboardAction() {
 		$this->view->assign('foos', array(
 			'bar', 'baz'
 		));

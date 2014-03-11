@@ -1,0 +1,15 @@
+resources:
+  methods:
+    Roketi_Panel_AdminMethods: 'class(Roketi\Panel\Controller\(Standard)Controller)'
+    Roketi_Panel_EverybodyMethods: 'class(Roketi\Panel\Controller\LoginController)'
+
+roles:
+  Administrator: []
+
+acls:
+  Administrator:
+    methods:
+      Roketi_Panel_AdminMethods: GRANT
+  Everybody:
+    methods:
+      Roketi_Panel_EverybodyMethods: GRANT

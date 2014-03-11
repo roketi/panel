@@ -1,0 +1,38 @@
+{namespace bootstrap=TYPO3\Twitter\Bootstrap\ViewHelpers}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		<f:translate id="pageTitle" source="Login" />
+	</title>
+
+	<bootstrap:include includeJQuery="TRUE" version="3" />
+	<link href="{f:uri.resource(path: 'CSS/roketi-panel.css', package: 'Roketi.Panel')}" media="screen" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{f:uri.resource(path: 'JS/roketi-panel.js', package: 'Roketi.Panel')}"></script>
+	<f:base />
+</head>
+<body class="roketi-loginform">
+<div class="container">
+	<div class="row loginHeaderRow">
+		<div class="col-lg-4 col-lg-offset-4">
+		</div>
+	</div>
+	<div class="row titleRow">
+		<div class="col-lg-4 col-lg-offset-4">
+			<f:translate id="loginTitle" source="Login" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-4 content">
+			<div class="flashMessages">
+				<f:render partial="FlashMessages" />
+				<f:render partial="FormErrors" />
+			</div>
+			<f:render section="Content" />
+		</div>
+	</div>
+</div>
+</body>
+</html>

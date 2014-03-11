@@ -1,0 +1,27 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Roketi.Panel" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="pageTitle">
+				<source>Roketi: Login</source>
+			</trans-unit>
+			<trans-unit id="loginTitle">
+				<source>Welcome to Roketi, please login below:</source>
+			</trans-unit>
+			<trans-unit id="status_login_failure">
+				<source>Login failed!</source>
+			</trans-unit>
+			<trans-unit id="status_login_success">
+				<source>Login successful!</source>
+			</trans-unit>
+			<trans-unit id="labelUsername">
+				<source>User:</source>
+			</trans-unit>
+			<trans-unit id="labelPassword">
+				<source>Password:</source>
+			</trans-unit>
+			<trans-unit id="labelSubmitLoginForm">
+				<source>Login now</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

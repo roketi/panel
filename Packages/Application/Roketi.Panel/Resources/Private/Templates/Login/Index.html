@@ -1,0 +1,25 @@
+<f:layout name="Login.html" />
+
+<f:section name="Title">
+	<h2>
+		<f:translate id="title" source="Login" />
+	</h2>
+</f:section>
+
+<f:section name="Content">
+	<div id="login">
+		<f:form action="authenticate" method="post" name="loginform">
+			<div class="overflowHidden">
+				<label for="username"><f:translate id="labelUsername" source="Login" /></label>
+				<f:form.textfield id="username" class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" />
+			</div>
+			<div class="spanClear secondAndMoreFormElement overflowHidden">
+				<label for="password"><f:translate id="labelPassword" source="Login" /></label>
+				<f:form.password id="password" class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" />
+			</div>
+			<div class="spanClear secondAndMoreFormElement overflowHidden">
+				<f:form.submit value="{f:translate(id: 'labelSubmitLoginForm', source: 'Login')}" class="btn btn-primary" id="login" />
+			</div>
+		</f:form>
+	</div>
+</f:section>

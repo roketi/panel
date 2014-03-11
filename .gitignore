@@ -13,6 +13,7 @@
 /Configuration/README
 /Configuration/PackageStates.php
 /Configuration/Development/Settings.yaml
+/Configuration/Testing/Behat/Settings.yaml
 /flow
 /flow.bat
 /Build/Reports/UnitTests.xml

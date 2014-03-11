@@ -1,0 +1,34 @@
+body {
+  color: #ffffff;
+}
+.alert {
+  padding: 8px 15px;
+}
+.alert-danger {
+  background-color: #a32c03;
+  border-color: #3f1101;
+  color: #ffffff;
+}
+.roketi-loginform {
+  background-color: #222222;
+}
+.roketi-loginform .loginHeaderRow div {
+  background: transparent url('/_Resources/Static/Packages/Roketi.Panel/img/roketi_logo.svg') 0 0 no-repeat;
+  min-height: 100px;
+  background-position: 50%;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+.roketi-loginform .titleRow div {
+  margin-bottom: 1em;
+  color: #ffc606;
+  font-weight: bold;
+}
+.roketi-loginform input {
+  color: #000;
+}
+.roketi-loginform .btn {
+  background-color: #ffc606;
+  border-color: #856700;
+  color: #222222;
+}

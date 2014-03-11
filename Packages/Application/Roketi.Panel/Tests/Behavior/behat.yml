@@ -17,4 +17,4 @@ default:
       #
       # Use BEHAT_PARAMS="extensions[Behat\MinkExtension\Extension][base_url]=http://example.local/" for configuration during runtime.
       #
-      base_url: http://roketi-panel.dev
+      base_url: http://roketi-panel.test

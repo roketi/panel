@@ -1,4 +1,22 @@
 -
+  name: 'Login form'
+  uriPattern: 'login(/{@action})'
+  defaults:
+    '@package': 'Roketi.Panel'
+    '@controller': 'Login'
+    '@action': 'index'
+    '@format': 'html'
+
+-
+  name: 'Dashboard'
+  uriPattern: 'dashboard'
+  defaults:
+    '@package': 'Roketi.Panel'
+    '@controller': 'Standard'
+    '@action': 'dashboard'
+    '@format': 'html'
+
+-
   name: 'Fallback rule'
   uriPattern: ''
   defaults:

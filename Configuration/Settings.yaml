@@ -1,0 +1,17 @@
+TYPO3:
+  Flow:
+    security:
+      enable: TRUE
+      authentication:
+        authenticationStrategy: oneToken
+        providers:
+          DefaultProvider:
+            provider: PersistedUsernamePasswordProvider
+            entryPoint: 'WebRedirect'
+            entryPointOptions:
+              routeValues:
+                '@package': 'Roketi.Panel'
+                '@controller': 'Login'
+                '@action': 'index'
+      authorization:
+        accessDecisionVoters: [TYPO3\Flow\Security\Authorization\Voter\Policy]
