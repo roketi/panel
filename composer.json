@@ -1,6 +1,15 @@
 {
 	"name": "roketi/panel",
 	"description": "The central Roketi GUI, aka the control panel to manage hosting services",
+	"license": "MIT",
+	"keywords": [
+		"hosting",
+		"controlpanel",
+		"cluster",
+		"management",
+		"server",
+		"services"
+	],
 	"authors": [
 		{
 			"name": "Mario Rimann",
