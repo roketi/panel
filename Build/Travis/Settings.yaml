@@ -1,0 +1,8 @@
+TYPO3:
+  Flow:
+    baseUri: http://roketi.test/
+    persistence:
+      backendOptions:
+        dbname: 'roketi'
+        driver: pdo_mysql
+        user: 'root'

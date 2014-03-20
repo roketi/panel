@@ -1,0 +1,54 @@
+# Heavily inspired by the travis config file from Marc Neuhas (@apocalip) at
+# https://github.com/mneuhaus/TYPO3.Neos
+# Thanks man for sharing!
+
+language: php
+php:
+  - 5.5
+
+before_script:
+  # update Composer and install the whole checked out application
+  - composer self-update
+  - composer install --dev
+
+  # install the webserver incl. PHP FPM
+  - sudo apt-get install apache2 libapache2-mod-fastcgi
+  - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
+  - sudo a2enmod rewrite actions fastcgi alias
+  - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
+
+  # configure apache virtual hosts
+  - sudo cp -f Build/Travis/VirtualHost /etc/apache2/sites-available/default
+  - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
+  - echo "127.0.0.1 roketi-panel.test" | sudo tee -a /etc/hosts
+  - sudo service apache2 restart
+
+  # create application configuration
+  - mkdir -p Configuration/Testing/Behat
+  - cp Build/Travis/Settings.yaml Configuration/Testing/Behat/Settings.yaml
+  - mkdir -p Configuration/Development/Behat
+  - cp Build/Travis/Settings.yaml Configuration/Development/Behat/Settings.yaml
+
+  # set up behat
+  - php ./flow behat:setup
+
+  # create the database
+  - mysql -e 'CREATE DATABASE roketi;'
+
+  # prepare the database schema and create a demo user
+  - FLOW_CONTEXT=Development/Behat ./flow doctrine:migrate
+  - FLOW_CONTEXT=Development/Behat ./flow Roketi.Panel:setup:createadminuser --username "john.doe" --password "12345"
+
+  # warmup Caches
+  - FLOW_CONTEXT=Development/Behat ./flow flow:cache:warmup
+
+after_script:
+  # remove the database
+  - mysql -e 'DROP DATABASE roketi;'
+
+script:
+  # run the actual tests, but not the function tests of Flow itself
+    - phpunit -c Build/BuildEssentials/PhpUnit/UnitTests.xml
+#   - phpunit -c Build/BuildEssentials/PhpUnit/FunctionalTests.xml
+    - bin/behat -c Packages/Application/Roketi.Panel/Tests/Behavior/behat.yml --format progress
