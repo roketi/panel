@@ -84,7 +84,7 @@ class LoginController extends BaseController {
 		$this->authenticationManager->logout();
 		$this->addFlashMessage(
 			$this->translate(
-				'logout.successful',
+				'status_logout_success',
 				'Login'
 			)
 		);

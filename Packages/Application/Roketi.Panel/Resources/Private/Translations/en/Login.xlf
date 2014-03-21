@@ -13,6 +13,9 @@
 			<trans-unit id="status_login_success">
 				<source>Login successful!</source>
 			</trans-unit>
+			<trans-unit id="status_logout_success">
+				<source>Goodbye, you logged out successfully</source>
+			</trans-unit>
 			<trans-unit id="labelUsername">
 				<source>User:</source>
 			</trans-unit>

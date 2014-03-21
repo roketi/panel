@@ -35,6 +35,16 @@ class FeatureContext extends MinkContext {
 	}
 
 	/**
+	 * @Given /^I am logged in as "([^"]*)" with password "([^"]*)"$/
+	 */
+	public function iAmLoggedInAsWithPassword($username, $password) {
+		$this->visit('/');
+		$this->fillField('username', $username);
+		$this->fillField('password', $password);
+		$this->pressButton('login');
+	}
+
+	/**
 	 * @Then /^I should see a login form$/
 	 */
 	public function iShouldSeeALoginForm() {
