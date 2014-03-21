@@ -12,4 +12,4 @@ This will install all the neccessary stuff in ``/Build/Behat/``. The Roketi.Pane
 
 	bin/behat -c Packages/Application/Roketi.Panel/Tests/Behavior/behat.yml
 
-Important: The default URL in the config is http://roketi-panel.dev/ - if your's differs, you need to changed that in the config file.
+Important: The default URL in the config is http://roketi-panel.test/ - if your's differs, you need to changed that in the config file.
