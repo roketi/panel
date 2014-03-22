@@ -17,6 +17,15 @@
     '@format': 'html'
 
 -
+  name: 'default'
+  uriPattern: '{@controller}(/{@action})'
+  defaults:
+    '@package': 'Roketi.Panel'
+    '@action': 'index'
+    '@format': 'html'
+  appendExceedingArguments: true
+
+-
   name: 'Fallback rule'
   uriPattern: ''
   defaults:

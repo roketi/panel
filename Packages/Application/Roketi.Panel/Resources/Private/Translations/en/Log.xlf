@@ -1,0 +1,18 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Roketi.Panel" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="no_log_entries">
+				<source>No log entries yet.</source>
+			</trans-unit>
+			<trans-unit id="authentication_user_login_failed">
+				<source>Failed login attempt</source>
+			</trans-unit>
+			<trans-unit id="authentication_user_logged_in">
+				<source>User {0} logged in</source>
+			</trans-unit>
+			<trans-unit id="authentication_user_logged_out">
+				<source>User {0} logged out</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
