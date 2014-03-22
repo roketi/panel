@@ -1,0 +1,14 @@
+KayStrobach:
+  Menu:
+    Menus:
+      Development:
+        Configuration:
+          TemplatePathAndFileName:
+        Items:
+          1000:
+            label: ' '
+            labelId: 'menu.dashboard'
+            iconclass: 'glyphicon glyphicon-home'
+            package: 'Roketi.Panel'
+            action: 'dashboard'
+            controller: 'Standard'

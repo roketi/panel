@@ -1,14 +1,47 @@
+{namespace kaystrobachmenu=KayStrobach\Menu\ViewHelpers}
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title><f:render section="Title" /></title>
 		<f:base />
+
+		<link href="{f:uri.resource(path: 'CSS/roketi-panel.css', package: 'Roketi.Panel')}" media="screen" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="{f:uri.resource(path: 'JS/roketi-panel.js', package: 'Roketi.Panel')}"></script>
+		<f:base />
 	</head>
-	<body>
-		<f:flashMessages class="flashmessages" />
-		<f:link.action action="logout" controller="Login" id="logout">Logout</f:link.action>
-		<h1><f:render section="Title" /></h1>
+	<body class="default">
+
+
+	<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="container">
+
+			<a class="navbar-brand" href="/">Roketi</a>
+			<div class="collapse navbar-collapse">
+				<kaystrobachmenu:widget.menu menu="Development" />
+
+				<f:security.ifAuthenticated>
+					<f:then>
+						<div class="nav navbar-nav navbar-right">
+							Signed in as <a href="#" class="navbar-link">{account.accountIdentifier}</a>
+							<f:link.action action="logout" controller="Login" title="Logout" class="navbar-link">
+								<span class="glyphicon glyphicon-log-out"></span>
+							</f:link.action>
+						</div>
+					</f:then>
+				</f:security.ifAuthenticated>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="flashMessages">
+			<f:render partial="FlashMessages" />
+			<f:render partial="FormErrors" />
+		</div>
+
 		<f:render section="Content" />
+	</div>
 	</body>
 </html>

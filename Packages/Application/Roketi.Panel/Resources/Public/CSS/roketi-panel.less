@@ -13,6 +13,21 @@
 
 body {
 	color: @fontColor;
+
+}
+
+// application wide defaults for the overall layout
+body.default {
+		padding-top: 60px;
+
+		.navbar {
+			.navbar-brand {
+				text-indent: -9999px;
+				background: transparent url('../img/roketi_logo.svg') 0 0 no-repeat;
+				background-position: 50%;
+				width: 92px;
+			}
+		}
 }
 
 .roketi-loginform {

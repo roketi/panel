@@ -8,7 +8,7 @@ namespace Roketi\Panel\Controller;
 
 use TYPO3\Flow\Annotations as Flow;
 
-class StandardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
+class StandardController extends BaseController {
 
 	/**
 	 * Just redirect the user to the dashboard
@@ -21,9 +21,6 @@ class StandardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 	 * @return void
 	 */
 	public function dashboardAction() {
-		$this->view->assign('foos', array(
-			'bar', 'baz'
-		));
 	}
 
 }

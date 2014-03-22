@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "66b3fc1e6b813f21e84c8ec50c028758",
+    "hash": "f5a00a64038c14e2c89af9f64baac24d",
     "packages": [
         {
             "name": "composer/installers",
@@ -688,6 +688,36 @@
                 "orm"
             ],
             "time": "2014-02-08 16:28:24"
+        },
+        {
+            "name": "kaystrobach/menu",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaystrobach/FLOW.Menu.git",
+                "reference": "295c86cdcb15bb5f20aef762056155ef303e3cfb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kaystrobach/FLOW.Menu/zipball/295c86cdcb15bb5f20aef762056155ef303e3cfb",
+                "reference": "295c86cdcb15bb5f20aef762056155ef303e3cfb",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/flow": "*",
+                "typo3/fluid": "*"
+            },
+            "type": "typo3-flow-package",
+            "autoload": {
+                "psr-0": {
+                    "KayStrobach\\Menu": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2014-04-03 19:40:46"
         },
         {
             "name": "symfony/console",
@@ -1459,6 +1489,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "kaystrobach/menu": 20,
         "doctrine/migrations": 20,
         "typo3/kickstart": 20,
         "typo3/buildessentials": 20,

@@ -24,6 +24,7 @@
 	},
 	"require": {
 		"typo3/flow": "2.1.x",
+		"kaystrobach/menu": "dev-master",
 		"doctrine/migrations": "@dev"
 	},
 	"require-dev": {
