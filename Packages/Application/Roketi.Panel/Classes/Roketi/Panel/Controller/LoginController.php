@@ -1,6 +1,11 @@
 <?php
 namespace Roketi\Panel\Controller;
 
+/*                                                                     *
+ * This script belongs to the TYPO3 Flow package 'Roketi.Panel'.       *
+ *                                                                     *
+ *                                                                     */
+
 use TYPO3\Flow\Annotations as Flow;
 
 /**
