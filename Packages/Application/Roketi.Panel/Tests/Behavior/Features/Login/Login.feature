@@ -20,6 +20,17 @@ Feature: User Login
     And I should be logged in as "John Doe"
     And I should see "Logout"
 
+
+  Scenario: Successful login with valid user data
+    Given I am on "/login"
+    When I fill in "username" with "john.doe"
+    When I fill in "password" with "12345"
+    When I press "login"
+    Then I should be on "/dashboard"
+    And I should see "Login successful"
+    And I should be logged in as "John Doe"
+    And I should see "Logout"
+
   Scenario: Failed login with invalid user data
     Given I am on "/login"
     When I fill in "username" with "john.doe"
