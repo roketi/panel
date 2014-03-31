@@ -1,5 +1,7 @@
 [![Latest Stable Version](https://poser.pugx.org/roketi/panel/v/stable.png)](https://packagist.org/packages/roketi/panel)
 [![Total Downloads](https://poser.pugx.org/roketi/panel/downloads.png)](https://packagist.org/packages/roketi/panel)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/roketi/panel/badges/quality-score.png?s=740b19998383d480f55f2191cda9dd89f6a1e000)](https://scrutinizer-ci.com/g/roketi/panel/)
+[![Code Coverage](https://scrutinizer-ci.com/g/roketi/panel/badges/coverage.png?s=3aab45c06dd9834ecd74ccb0e0931ff29ac48772)](https://scrutinizer-ci.com/g/roketi/panel/)
 [![Build Status](https://travis-ci.org/roketi/panel.png)](https://travis-ci.org/roketi/panel)
 
 ### Running the Behat Tests
