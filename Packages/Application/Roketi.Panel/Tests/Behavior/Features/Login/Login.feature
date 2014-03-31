@@ -1,6 +1,11 @@
 Feature: User Login
   As an administator I want to login to the System
 
+  Scenario: Dashboard is not accessible before logging in
+    Given I am on "/dashboard"
+    Then I should be on "/login"
+    And I should see a login form
+
   Scenario: Opening the application in a fresh session redirects to login form
     Given I am not logged in
     When I go to "/"
