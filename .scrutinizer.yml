@@ -20,7 +20,7 @@ tools:
     php_cs_fixer:
         enabled: true
         config:
-          level: psr2
+          level: psr1
 
     php_hhvm:
         enabled: true
