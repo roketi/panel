@@ -24,10 +24,9 @@ class LoginAspect {
 	 * Logs each successful login
 	 *
 	 * @Flow\Before("method(Roketi\Panel\Controller\LoginController->onAuthenticationSuccess())")
-	 * @param \TYPO3\Flow\Aop\JoinPointInterface $joinPoint The current join point
 	 * @return mixed
 	 */
-	public function logSuccessfulLogin(\TYPO3\Flow\AOP\JoinPointInterface $joinPoint) {
+	public function logSuccessfulLogin() {
 		$this->loggingService->log(
 			'authentication',
 			'user_logged_in'
@@ -38,10 +37,9 @@ class LoginAspect {
 	 * Logs each failed login attempt
 	 *
 	 * @Flow\Before("method(Roketi\Panel\Controller\LoginController->onAuthenticationFailure())")
-	 * @param \TYPO3\Flow\Aop\JoinPointInterface $joinPoint The current join point
 	 * @return mixed
 	 */
-	public function logFailedLogin(\TYPO3\Flow\AOP\JoinPointInterface $joinPoint) {
+	public function logFailedLogin() {
 		$this->loggingService->logWithoutUser(
 			'authentication',
 			'user_login_failed'
@@ -52,10 +50,9 @@ class LoginAspect {
 	 * Logs each logout
 	 *
 	 * @Flow\Before("method(Roketi\Panel\Controller\LoginController->logoutAction())")
-	 * @param \TYPO3\Flow\Aop\JoinPointInterface $joinPoint The current join point
 	 * @return mixed
 	 */
-	public function logLogout(\TYPO3\Flow\AOP\JoinPointInterface $joinPoint) {
+	public function logLogout() {
 		$this->loggingService->log(
 			'authentication',
 			'user_logged_out'
