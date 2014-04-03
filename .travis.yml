@@ -51,7 +51,7 @@ after_script:
 
 script:
   # run the actual tests, but not the function tests of Flow itself
-    - phpunit -c Build/BuildEssentials/PhpUnit/UnitTests.xml --coverage-clover=coverage.clover
+    - phpunit -c Build/BuildEssentials/PhpUnit/UnitTests.xml --coverage-clover=coverage.clover Packages/Application/Roketi.Panel/Tests/Unit
     - wget https://scrutinizer-ci.com/ocular.phar
     - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 #   - phpunit -c Build/BuildEssentials/PhpUnit/FunctionalTests.xml
