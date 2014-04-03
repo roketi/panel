@@ -49,7 +49,7 @@ class LogEntry {
 	}
 
 	/**
-	 * @param \DateTime, $timeStamp
+	 * @param \DateTime $timeStamp
 	 * @return void
 	 */
 	public function setTimeStamp($timeStamp) {
@@ -64,7 +64,7 @@ class LogEntry {
 	}
 
 	/**
-	 * @param \TYPO3\Flow\Security\Account, $account
+	 * @param \TYPO3\Flow\Security\Account $account
 	 * @return void
 	 */
 	public function setAccount($account) {
@@ -79,7 +79,7 @@ class LogEntry {
 	}
 
 	/**
-	 * @param string, $remoteIp
+	 * @param string $remoteIp
 	 * @return void
 	 */
 	public function setRemoteIp($remoteIp) {
@@ -94,7 +94,7 @@ class LogEntry {
 	}
 
 	/**
-	 * @param string, $component
+	 * @param string $component
 	 * @return void
 	 */
 	public function setComponent($component) {

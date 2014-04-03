@@ -1,9 +1,6 @@
 <?php
 
-use Behat\Behat\Exception\PendingException;
-use Behat\Gherkin\Node\TableNode,
-	Behat\MinkExtension\Context\MinkContext;
-use TYPO3\Flow\Utility\Arrays;
+use	Behat\MinkExtension\Context\MinkContext;
 use PHPUnit_Framework_Assert as Assert;
 
 require_once(__DIR__ . '/../../../../../Flowpack.Behat/Tests/Behat/FlowContext.php');

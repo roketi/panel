@@ -7,7 +7,6 @@ namespace Roketi\Panel\Aspects;
  *                                                                        */
 
 use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Flow\Aop\JoinPointInterface;
 
 /**
  * @Flow\Scope("singleton")
