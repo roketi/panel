@@ -4,6 +4,9 @@
 			<trans-unit id="menu.dashboard">
 				<source>Dashboard</source>
 			</trans-unit>
+			<trans-unit id="menu.domain">
+				<source>Domains</source>
+			</trans-unit>
 			<trans-unit id="logout">
 				<source>Logout</source>
 			</trans-unit>

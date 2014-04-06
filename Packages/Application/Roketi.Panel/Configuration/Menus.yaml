@@ -12,3 +12,10 @@ KayStrobach:
             package: 'Roketi.Panel'
             action: 'dashboard'
             controller: 'Standard'
+          2000:
+            label: ' '
+            labelId: 'menu.domain'
+            iconclass: 'glyphicon glyphicon-globe'
+            package: 'Roketi.Panel'
+            action: 'index'
+            controller: 'Domain'

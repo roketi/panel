@@ -1,0 +1,24 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Roketi.Panel" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="no_domains">
+				<source>There are no domains created yet.</source>
+			</trans-unit>
+			<trans-unit id="message.created_successfully">
+				<source>Domain created successfully!</source>
+			</trans-unit>
+			<trans-unit id="list.header.domainName">
+				<source>Domain Name</source>
+			</trans-unit>
+			<trans-unit id="list.header.idnaName">
+				<source>IDN</source>
+			</trans-unit>
+			<trans-unit id="list.header.dnsServiceActive">
+				<source>DNS-Service</source>
+			</trans-unit>
+			<trans-unit id="list.header.mailServiceActive">
+				<source>Mail-Service</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

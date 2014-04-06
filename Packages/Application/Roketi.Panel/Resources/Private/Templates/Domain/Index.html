@@ -1,0 +1,65 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Domains</f:section>
+
+<f:section name="Content">
+	<h1>Domains</h1>
+	<f:link.action action="new" class="btn btn-primary">Create new Domain</f:link.action>
+	<f:if condition="{domains}">
+		<f:then>
+			<table>
+				<tr>
+					<th>
+						<f:translate id="list.header.domainName" source="Domain" />
+					</th>
+					<th>
+						<f:translate id="list.header.idnaName" source="Domain" />
+					</th>
+					<th>
+						<f:translate id="list.header.dnsServiceActive" source="Domain" />
+					</th>
+					<th>
+						<f:translate id="list.header.mailServiceActive" source="Domain" />
+					</th>
+				</tr>
+				<f:for each="{domains}" as="domain">
+					<tr>
+						<td>
+							{domain.name}
+						</td>
+						<td>
+							<f:if condition="{0: domain.name} != {0:domain.idnaName}">
+								{domain.idnaName}
+							</f:if>
+						</td>
+						<td>
+							<f:if condition="{domain.dnsServiceActive}">
+								<f:then>
+									<span class="glyphicon glyphicon-ok"></span>
+								</f:then>
+								<f:else>
+									<span class="glyphicon glyphicon-remove"></span>
+								</f:else>
+							</f:if>
+						</td>
+						<td>
+							<f:if condition="{domain.mailServiceActive}">
+								<f:then>
+									<span class="glyphicon glyphicon-ok"></span>
+								</f:then>
+								<f:else>
+									<span class="glyphicon glyphicon-remove"></span>
+								</f:else>
+							</f:if>
+						</td>
+					</tr>
+				</f:for>
+			</table>
+		</f:then>
+		<f:else>
+			<p>
+				<f:translate id="no_domains" source="Domain" />
+			</p>
+		</f:else>
+	</f:if>
+</f:section>
