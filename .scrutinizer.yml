@@ -1,8 +1,8 @@
 filter:
     excluded_paths:
-        - 'Config/*'
-        - 'Database/*'
-        - 'vendor/*'
+        - 'Configuration/*'
+        - 'Packages/Framework/*'
+        - 'Packages/Libraries/*'
 
 tools:
     external_code_coverage:
