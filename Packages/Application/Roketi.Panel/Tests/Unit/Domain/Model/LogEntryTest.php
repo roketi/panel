@@ -49,6 +49,21 @@ class LogEntryTest extends \TYPO3\Flow\Tests\UnitTestCase {
 	/**
 	 * @test
 	 */
+	public function unsetAccountRemovesAccountFromObject() {
+		$account = new \TYPO3\Flow\Security\Account();
+		$this->fixture->setAccount($account);
+
+		$this->fixture->unsetAccount();
+
+		$this->assertNull(
+			$this->fixture->getAccount()
+		);
+	}
+
+
+	/**
+	 * @test
+	 */
 	public function setRemoteIpSetsRemoteIp() {
 		$this->fixture->setRemoteIp('10.0.0.99');
 

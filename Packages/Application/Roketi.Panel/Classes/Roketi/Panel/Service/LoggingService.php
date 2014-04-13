@@ -86,7 +86,7 @@ class LoggingService {
 			$account = $this->context->getAccount();
 			$entry->setAccount($account);
 		} else {
-			$entry->setAccount(NULL);
+			$entry->unsetAccount();
 		}
 
 		// fiddle out the IP of the client

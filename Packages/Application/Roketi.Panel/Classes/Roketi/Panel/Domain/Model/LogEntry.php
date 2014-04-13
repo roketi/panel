@@ -72,6 +72,15 @@ class LogEntry {
 	}
 
 	/**
+	 * Make sure no account is associated with this log entry
+	 *
+	 * @return void
+	 */
+	public function unsetAccount() {
+		$this->account = NULL;
+	}
+
+	/**
 	 * @return string,
 	 */
 	public function getRemoteIp() {
