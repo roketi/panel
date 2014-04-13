@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "36fffc1d993ebcc92c2abe3f8abb58be",
+    "hash": "ff43e21d9fe877d99960e662f1bb56a4",
     "packages": [
         {
             "name": "composer/installers",
@@ -954,30 +954,6 @@
             ],
             "description": "A PHP implementation of the OASIS Customer Information Quality (CIQ) XML Standard.",
             "time": "2013-12-10 15:54:30"
-        },
-        {
-            "name": "typo3/twitter-bootstrap",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "git://git.typo3.org/Packages/TYPO3.Twitter.Bootstrap.git",
-                "reference": "997a9f44febb0d7156f0a6598a75eba5752407a1"
-            },
-            "require": {
-                "typo3/flow": "*"
-            },
-            "type": "typo3-flow-package",
-            "autoload": {
-                "psr-0": {
-                    "TYPO3\\Twitter\\Bootstrap": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. Packaged for use with TYPO3 Flow",
-            "time": "2014-02-13 13:54:53"
         }
     ],
     "packages-dev": [
