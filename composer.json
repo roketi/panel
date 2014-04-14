@@ -18,6 +18,10 @@
 			"role": "Lead Developer"
 		}
 	],
+	"support": {
+		"issues": "https://roketi.atlassian.net/",
+		"source": "https://github.com/roketi/panel"
+	},
 	"require": {
 		"typo3/flow": "2.1.x",
 		"doctrine/migrations": "@dev"

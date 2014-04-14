@@ -5,6 +5,12 @@
 [![Dependency Status](https://www.versioneye.com/php/roketi:panel/dev-master/badge.png)](https://www.versioneye.com/php/roketi:panel/dev-master)
 [![Build Status](https://travis-ci.org/roketi/panel.png)](https://travis-ci.org/roketi/panel)
 
+
+### Submitting issues or seeking for work?
+
+We manage our issues and tasks in JIRA, you can find our installation at https://roketi.atlassian.net/ - feel free to grab some work - or mention issues and bugs you've encountered.
+
+
 ### Running the Behat Tests
 
 After installing Roketi Panel in your development environment, you need to run the following commands from the root of the installation to prepare your local Behat stuff::
