@@ -1,47 +1,162 @@
 @import url(../../Private/BowerComponents/bootstrap/less/bootstrap.less);
 
-@backgroundColor: #222;
-@fontColor: #fff;
-@roketiYellow: #ffc606;
+// font from Google
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,500);
 
-@alertDanger: #a32c03;
+
+// colors
+@loginBackgroundColor: #262626;
+@fontColor: #cacaca;
+@borderColor: #7e6629;
+@iconColor: @borderColor;
+
 
 body {
 	color: @fontColor;
 }
-.alert {
-	padding: 8px 15px;
-}
-.alert-danger {
-	background-color: @alertDanger;
-	border-color: darken(@alertDanger, 20%);
-	color: @fontColor;
-}
 
 .roketi-loginform {
-	background-color: @backgroundColor;
+	background: transparent url('../img/login_background.jpg') no-repeat center center fixed;
+	background-size: cover;
 
-	.loginHeaderRow div {
-		background: transparent url('/_Resources/Static/Packages/Roketi.Panel/img/roketi_logo.svg') 0 0 no-repeat;
-		min-height: 100px;
-		background-position: 50%;
-		margin-top: 5em;
-		margin-bottom: 2em;
-	}
+	font-family: 'Dosis', 'Arial', 'sans-serif';
 
-	.titleRow div {
-		margin-bottom: 1em;
-		color: @roketiYellow;
-		font-weight: bold;
-	}
+	.loginBox {
+		margin-top: 120px;
+		padding: 0;
 
-	input {
-		color: #000;
-	}
+		> div {
+			padding: 0 15px;
+		}
 
-	.btn {
-		background-color: @roketiYellow;
-		border-color: darken(@roketiYellow, 25%);
-		color: @backgroundColor;
+		// use rgba here to avoid inheritance of the transparency by the child elements
+		background-color: rgba(26, 26, 26, 0.8);
+
+		border-radius: 10px;
+
+		.alert {
+			height: 75px;
+			width: 100%;
+
+			border: none;
+			border-radius: 0;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+
+			vertical-align: middle;
+			display: inline-block;
+
+			padding-top: 26px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.3em;
+		}
+
+		.alert-danger {
+			background-color: #972a2a;
+			color: @fontColor;
+		}
+
+		.loginHeaderRow {
+			background: transparent url('../img/roketi_logo.svg') 0 0 no-repeat;
+			min-height: 100px;
+			background-position: 50%;
+			margin: 3.5em auto;
+			margin-bottom: 4em;
+			width: 55%;
+		}
+
+		#login {
+			text-align: center;
+		}
+
+		.input-group {
+			margin-top: 1.8em;
+
+			.input-group-addon {
+				height: 47px;
+				background-color: @loginBackgroundColor;
+				color: @iconColor;
+				border: 1px solid @borderColor;
+				border-right: none;
+
+				padding-left: 16px;
+				padding-right: 16px;
+				margin: 0;
+			}
+
+			input {
+				height: 47px;
+				background-color: @loginBackgroundColor;
+				opacity: 1;
+				color: @fontColor;
+				border: 1px solid @borderColor;
+				padding-left: 15px;
+				letter-spacing: 1px;
+				font-size: 1.1em;
+			}
+
+			// to get rid of the "yellowish" background-color Chrome uses to show the user
+			// that there's an automagically filled value
+			input:-webkit-autofill {
+				-webkit-box-shadow: 0 0 0px 1000px @loginBackgroundColor inset;
+				-webkit-text-fill-color: @fontColor;
+				color: @fontColor;
+			}
+		}
+
+		.loginNowButton {
+			.btn;
+			height: 48px;
+			width: 148px;
+			margin: 1.5em auto;
+			display: inline-block;
+
+			letter-spacing: 1px;
+			text-transform: uppercase;
+
+			color: @fontColor;
+			border: 1px solid @borderColor;
+			background: transparent;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+
+		.supportButtons {
+			width: 100%;
+			background-color: @loginBackgroundColor;
+			opacity: 1;
+			position: relative;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin-top: 2em;
+
+			.forgotPassword,
+			.needHelp {
+				margin: 0;
+				padding: 0;
+				width: 49.9%;
+				display: inline-block;
+				height: 60px;
+				background-color: transparent;
+				text-align: center;
+
+				padding-top: 21px;
+				font-size: 0.9em;
+				color: @fontColor;
+				text-decoration: none;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			.needHelp {
+				width: 49%;
+				border-left: 1px solid #212121;
+			}
+		}
 	}
 }

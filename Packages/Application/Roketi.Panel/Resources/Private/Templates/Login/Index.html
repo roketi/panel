@@ -7,19 +7,43 @@
 </f:section>
 
 <f:section name="Content">
-	<div id="login">
-		<f:form action="authenticate" method="post" name="loginform">
-			<div class="overflowHidden">
-				<label for="username"><f:translate id="labelUsername" source="Login" /></label>
-				<f:form.textfield id="username" class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" />
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4 loginBox">
+
+				<f:render partial="FlashMessages" />
+
+				<div class="row loginHeaderRow"></div>
+
+				<div id="login">
+					<f:form action="authenticate" method="post" name="loginform">
+
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-user"></span>
+							</span>
+							<f:form.textfield id="username" class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" placeholder="{f:translate(id:'placeholderUsername', source:'Login')}" />
+						</div>
+
+						<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<f:form.password id="password" class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" placeholder="{f:translate(id:'placeholderPassword', source:'Login')}" />
+						</div>
+
+						<f:form.submit value="{f:translate(id: 'labelSubmitLoginForm', source: 'Login')}" class="loginNowButton" id="login" />		</f:form>
+				</div>
+
+				<div class="supportButtons">
+					<a class="forgotPassword" href="#">
+						<f:translate id="forgotPassword" source="Login"/>
+					</a>
+					<a class="needHelp" href="#">
+						<f:translate id="needHelp" source="Login"/>
+					</a>
+				</div>
 			</div>
-			<div class="spanClear secondAndMoreFormElement overflowHidden">
-				<label for="password"><f:translate id="labelPassword" source="Login" /></label>
-				<f:form.password id="password" class="form-control" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" />
-			</div>
-			<div class="spanClear secondAndMoreFormElement overflowHidden">
-				<f:form.submit value="{f:translate(id: 'labelSubmitLoginForm', source: 'Login')}" class="btn btn-primary" id="login" />
-			</div>
-		</f:form>
+		</div>
 	</div>
 </f:section>

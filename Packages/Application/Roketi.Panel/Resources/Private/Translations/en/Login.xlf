@@ -4,9 +4,6 @@
 			<trans-unit id="pageTitle">
 				<source>Roketi: Login</source>
 			</trans-unit>
-			<trans-unit id="loginTitle">
-				<source>Welcome to Roketi, please login below:</source>
-			</trans-unit>
 			<trans-unit id="status_login_failure">
 				<source>Login failed!</source>
 			</trans-unit>
@@ -22,8 +19,20 @@
 			<trans-unit id="labelPassword">
 				<source>Password:</source>
 			</trans-unit>
+			<trans-unit id="placeholderUsername">
+				<source>USERNAME</source>
+			</trans-unit>
+			<trans-unit id="placeholderPassword">
+				<source>PASSWORD</source>
+			</trans-unit>
 			<trans-unit id="labelSubmitLoginForm">
-				<source>Login now</source>
+				<source>Login</source>
+			</trans-unit>
+			<trans-unit id="forgotPassword">
+				<source>Forgot your Password?</source>
+			</trans-unit>
+			<trans-unit id="needHelp">
+				<source>Need Help?</source>
 			</trans-unit>
 		</body>
 	</file>
