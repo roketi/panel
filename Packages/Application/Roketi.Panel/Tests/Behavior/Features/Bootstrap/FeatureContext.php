@@ -52,7 +52,7 @@ class FeatureContext extends MinkContext {
 	 * @Given /^I should be logged in as "([^"]*)"$/
 	 */
 	public function iShouldBeLoggedInAs($name) {
-		$this->assertSession()->elementTextContains('css', '#user-tasks', $name);
+		$this->assertSession()->pageTextContains('Signed in as ' . $name);
 	}
 
 	/**

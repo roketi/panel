@@ -22,7 +22,7 @@ Feature: User Login
     When I press "login"
     Then I should be on "/dashboard"
     And I should see "Login successful"
-    And I should be logged in as "John Doe"
+    And I should be logged in as "john.doe"
     And I should see "Logout"
 
 
@@ -33,7 +33,7 @@ Feature: User Login
     When I press "login"
     Then I should be on "/dashboard"
     And I should see "Login successful"
-    And I should be logged in as "John Doe"
+    And I should be logged in as "john.doe"
     And I should see "Logout"
 
   Scenario: Failed login with invalid user data

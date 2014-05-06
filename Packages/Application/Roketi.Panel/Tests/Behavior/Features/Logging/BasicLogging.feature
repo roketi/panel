@@ -16,7 +16,7 @@ Feature: Logging Authentication (login/logout)
 
   Scenario: User logouts are logged and can be listed
     Given I am logged in as "john.doe" with password "12345"
-    When I follow "logout"
+    When I follow "Logout"
     And I am logged in as "john.doe" with password "12345"
     When I go to "/log/"
     Then I should see "User john.doe logged out"
