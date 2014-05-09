@@ -7,8 +7,10 @@
 // colors
 @loginBackgroundColor: #262626;
 @fontColor: #cacaca;
-@borderColor: #7e6629;
-@iconColor: @borderColor;
+@borderColorRegular: #383838;
+@borderColorHover: #7e6629;
+@iconColorRegular: @borderColorRegular;
+@iconColorHover: @borderColorHover;
 
 
 body {
@@ -91,13 +93,18 @@ body.default {
 			.input-group-addon {
 				height: 47px;
 				background-color: @loginBackgroundColor;
-				color: @iconColor;
-				border: 1px solid @borderColor;
+				color: @iconColorRegular;
+				border: 1px solid @borderColorRegular;
 				border-right: none;
 
 				padding-left: 16px;
 				padding-right: 16px;
 				margin: 0;
+
+				&.rollover {
+					border-color: @borderColorHover;
+					color: @iconColorHover;
+				}
 			}
 
 			input {
@@ -105,10 +112,24 @@ body.default {
 				background-color: @loginBackgroundColor;
 				opacity: 1;
 				color: @fontColor;
-				border: 1px solid @borderColor;
+				border: 1px solid @borderColorRegular;
 				padding-left: 15px;
 				letter-spacing: 1px;
 				font-size: 1.1em;
+
+				// avoid the transition (strange effect with the JS based rollover effect)
+				transiation: none;
+				-webkit-transition: none;
+
+				// the "rollover" class is getting added via JS
+				&.rollover {
+					border-color: @borderColorHover;
+				}
+
+				&:focus {
+					box-shadow: none;
+					-webkit-box-shadow: none;
+				}
 			}
 
 			// to get rid of the "yellowish" background-color Chrome uses to show the user
@@ -131,11 +152,12 @@ body.default {
 			text-transform: uppercase;
 
 			color: @fontColor;
-			border: 1px solid @borderColor;
+			border: 1px solid @borderColorRegular;
 			background: transparent;
 
 			&:hover {
 				color: #fff;
+				border-color: @borderColorHover;
 			}
 		}
 

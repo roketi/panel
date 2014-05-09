@@ -5834,22 +5834,35 @@ body.default .navbar .navbar-brand {
 .roketi-loginform .loginBox .input-group .input-group-addon {
   height: 47px;
   background-color: #262626;
-  color: #7e6629;
-  border: 1px solid #7e6629;
+  color: #383838;
+  border: 1px solid #383838;
   border-right: none;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0;
+}
+.roketi-loginform .loginBox .input-group .input-group-addon.rollover {
+  border-color: #7e6629;
+  color: #7e6629;
 }
 .roketi-loginform .loginBox .input-group input {
   height: 47px;
   background-color: #262626;
   opacity: 1;
   color: #cacaca;
-  border: 1px solid #7e6629;
+  border: 1px solid #383838;
   padding-left: 15px;
   letter-spacing: 1px;
   font-size: 1.1em;
+  transiation: none;
+  -webkit-transition: none;
+}
+.roketi-loginform .loginBox .input-group input.rollover {
+  border-color: #7e6629;
+}
+.roketi-loginform .loginBox .input-group input:focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .roketi-loginform .loginBox .input-group input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #262626 inset;
@@ -5880,7 +5893,7 @@ body.default .navbar .navbar-brand {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #cacaca;
-  border: 1px solid #7e6629;
+  border: 1px solid #383838;
   background: transparent;
 }
 .roketi-loginform .loginBox .loginNowButton:focus,
@@ -5914,6 +5927,7 @@ fieldset[disabled] .roketi-loginform .loginBox .loginNowButton {
 }
 .roketi-loginform .loginBox .loginNowButton:hover {
   color: #fff;
+  border-color: #7e6629;
 }
 .roketi-loginform .loginBox .supportButtons {
   width: 100%;
