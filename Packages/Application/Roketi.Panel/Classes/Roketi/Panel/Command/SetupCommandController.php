@@ -2,7 +2,7 @@
 namespace Roketi\Panel\Command;
 
 /*                                                                        *
- * This script belongs to the TYPO3 Flow package "Rokei.Panel".           *
+ * This script belongs to the TYPO3 Flow package "Roketi.Panel".          *
  *                                                                        *
  *                                                                        */
 
