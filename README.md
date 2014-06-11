@@ -17,7 +17,15 @@ After installing Roketi Panel in your development environment, you need to run t
 
 	./flow behat:kickstart
 
-This will install all the neccessary stuff in ``/Build/Behat/``. The Roketi.Panel Package comes with it's own features that can be tested/executed with the following command::
+After that, create a new database "roketi_testing" as the Behat tests are executed within a different Flow Context with it's own database configuration. Then execute the following command to prepare the database schema::
+
+	FLOW_CONTEXT=Development/Behat ./flow doctrine:migrate
+
+As the basic test needs to access protected functions it needs to be able to log in to the Roketi Panel instance. For this, a user needs to be created first with the following command::
+
+	FLOW_CONTEXT=Development/Behat ./flow roketi.panel:setup:createadminuser --username john.doe --password 12345
+
+The above mentioned steps will install the base to run any Behat test in your Roketi setup. The Roketi.Panel Package comes with it's own features that can be tested/executed with the following command::
 
 	bin/behat -c Packages/Application/Roketi.Panel/Tests/Behavior/behat.yml
 
