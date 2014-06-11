@@ -39,7 +39,7 @@ Feature: Creating a domain
     And press "Create Domain"
     Then I should see "Another entity with the same unique identifiers already exists"
 
-@fixtures
+  @fixtures
   Scenario: Creating a domain with an invalid name is denied and an error is shown
     Given I am logged in as "john.doe" with password "12345"
     When I go to "/domain/new"
@@ -47,3 +47,13 @@ Feature: Creating a domain
     And press "Create Domain"
     Then I should be on "/domain/create"
     And I should see "The entered domain name is invalid!"
+
+  @fixtures
+  Scenario: Creation of new domain is logged
+    Given I am logged in as "john.doe" with password "12345"
+    When I go to "/domain/"
+    And I follow "Create new Domain"
+    When I fill in "foobar.ch" for "newDomainName"
+    And press "Create Domain"
+    When I go to "/log/"
+    Then I should see "Domain created"

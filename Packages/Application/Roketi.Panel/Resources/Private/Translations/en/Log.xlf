@@ -13,6 +13,9 @@
 			<trans-unit id="authentication_user_logged_out">
 				<source>User {0} logged out</source>
 			</trans-unit>
+			<trans-unit id="domain_domain_created">
+				<source>Domain created</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
