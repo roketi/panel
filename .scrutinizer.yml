@@ -3,6 +3,7 @@ filter:
         - 'Configuration/*'
         - 'Packages/Framework/*'
         - 'Packages/Libraries/*'
+        - 'Packages/Application/Roketi.Panel/Classes/Service/IdnaConvertOriginal.php'
 
 tools:
     external_code_coverage:
