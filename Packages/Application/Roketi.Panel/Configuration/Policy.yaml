@@ -1,11 +1,10 @@
+
 resources:
   methods:
-    Roketi_Panel_AdminMethods: 'class(Roketi\Panel\Controller\(Standard|Log|Domain)Controller)'
-    Roketi_Panel_EverybodyMethods: 'class(Roketi\Panel\Controller\LoginController)'
-
+    Roketi_Panel_AdminMethods: class(Roketi\Panel\Controller\(Standard|Log|Domain)Controller)
+    Roketi_Panel_EverybodyMethods: class(Roketi\Panel\Controller\LoginController)
 roles:
-  Administrator: []
-
+  Administrator: {  }
 acls:
   Administrator:
     methods:

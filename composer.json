@@ -23,7 +23,7 @@
 		"source": "https://github.com/roketi/panel"
 	},
 	"require": {
-		"typo3/flow": "2.1.x",
+		"typo3/flow": "2.2.x",
 		"kaystrobach/menu": "dev-master",
 		"doctrine/migrations": "@dev"
 	},

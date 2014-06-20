@@ -4,28 +4,29 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f5a00a64038c14e2c89af9f64baac24d",
+    "hash": "0a6f832f23bb53e041c00dfd9ea4d934",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.13",
+            "version": "v1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff"
+                "reference": "8281faa96186b18db9d53e8dbeb2d549c66d9cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
-                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
+                "url": "https://api.github.com/repos/composer/installers/zipball/8281faa96186b18db9d53e8dbeb2d549c66d9cdc",
+                "reference": "8281faa96186b18db9d53e8dbeb2d549c66d9cdc",
                 "shasum": ""
             },
             "replace": {
+                "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "3.7.*"
+                "phpunit/phpunit": "4.1.*"
             },
             "type": "composer-installer",
             "extra": {
@@ -55,12 +56,14 @@
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
                 "Craft",
+                "Dolibarr",
                 "Hurad",
                 "MODX Evo",
                 "OXID",
                 "WolfCMS",
                 "agl",
                 "annotatecms",
+                "bitrix",
                 "cakephp",
                 "codeigniter",
                 "concrete5",
@@ -77,9 +80,11 @@
                 "mako",
                 "mediawiki",
                 "modulework",
+                "moodle",
                 "phpbb",
                 "piwik",
                 "ppi",
+                "roundcube",
                 "shopware",
                 "silverstripe",
                 "symfony",
@@ -88,7 +93,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-04-09 16:12:43"
+            "time": "2014-06-18 15:29:19"
         },
         {
             "name": "doctrine/annotations",
@@ -881,14 +886,14 @@
         },
         {
             "name": "typo3/eel",
-            "version": "2.1.2",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Eel.git",
-                "reference": "1cec591fb877863922fe4bb5593c31ef23492c02"
+                "reference": "169c3b97486196891dd93fc8ae0c9d69e941f2f6"
             },
             "require": {
-                "typo3/flow": "2.1.*"
+                "typo3/flow": "2.2.*"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -901,15 +906,15 @@
                 "LGPL-3.0+"
             ],
             "description": "The Embedded Expression Language (Eel) is a building block for creating Domain Specific Languages",
-            "time": "2013-12-12 17:36:05"
+            "time": "2014-06-18 10:15:35"
         },
         {
             "name": "typo3/flow",
-            "version": "2.1.2",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Flow.git",
-                "reference": "4928a8fef8c697317327552ce12a74891dc35a25"
+                "reference": "094546fe7f5d9b1e76ba01f285ce497579f670f4"
             },
             "require": {
                 "composer/installers": "~1.0.2",
@@ -922,9 +927,9 @@
                 "php": ">=5.3.2",
                 "symfony/dom-crawler": "2.2.*",
                 "symfony/yaml": "2.1.*",
-                "typo3/eel": "2.1.*",
-                "typo3/fluid": "2.1.*",
-                "typo3/party": "2.1.*"
+                "typo3/eel": "2.2.*",
+                "typo3/fluid": "2.2.*",
+                "typo3/party": "2.2.*"
             },
             "suggest": {
                 "doctrine/data-fixtures": "To manage and execute the loading of data fixtures for the Doctrine ORM or ODM"
@@ -941,18 +946,18 @@
             ],
             "description": "TYPO3 Flow Application Framework",
             "homepage": "http://flow.typo3.org",
-            "time": "2014-04-03 10:07:30"
+            "time": "2014-06-18 10:15:35"
         },
         {
             "name": "typo3/fluid",
-            "version": "2.1.2",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Fluid.git",
-                "reference": "a411f3d12cf2aab6d417df9bd4314d345d94d90d"
+                "reference": "d3728fb80d71a7c7cfc7370f58710b6e532c11a9"
             },
             "require": {
-                "typo3/flow": "2.1.*"
+                "typo3/flow": "2.2.*"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -965,18 +970,18 @@
                 "LGPL-3.0+"
             ],
             "description": "Next-Generation Templating Framework for TYPO3 Flow and TYPO3 Neos, also backported to TYPO3 CMS",
-            "time": "2014-03-14 13:37:42"
+            "time": "2014-06-18 10:15:35"
         },
         {
             "name": "typo3/party",
-            "version": "2.1.2",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Party.git",
-                "reference": "775576b98f46db85a25e4799e91e028d7c2ec95f"
+                "reference": "9057b0d3fc0d93ed2ed3fd6dad60b4cc1022b943"
             },
             "require": {
-                "typo3/flow": "2.1.*"
+                "typo3/flow": "2.2.*"
             },
             "type": "typo3-flow-framework",
             "autoload": {
@@ -989,7 +994,7 @@
                 "LGPL-3.0+"
             ],
             "description": "A PHP implementation of the OASIS Customer Information Quality (CIQ) XML Standard.",
-            "time": "2013-12-10 15:54:30"
+            "time": "2014-06-18 10:15:35"
         }
     ],
     "packages-dev": [
@@ -1471,7 +1476,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Surf.git",
-                "reference": "16298851a6c5521e3708bd20b63292d22ef33883"
+                "reference": "722f43679ea434d992e32282ebd8adb8b2a874d7"
             },
             "require": {
                 "typo3/flow": "*"
@@ -1487,7 +1492,7 @@
                 "GPL-3.0+"
             ],
             "description": "TYPO3 Surf is a deployment tool based on Flow and suited for a wide variety of applications",
-            "time": "2014-03-21 17:08:41"
+            "time": "2014-06-12 14:43:50"
         }
     ],
     "aliases": [
