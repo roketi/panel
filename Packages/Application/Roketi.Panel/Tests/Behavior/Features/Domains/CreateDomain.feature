@@ -5,17 +5,20 @@ Feature: Creating a domain
     Given I am on "/domain/"
     Then I should be on "/login"
 
+  @fixtures
   Scenario: Logged in user can reach list of domains via navigation
     Given I am logged in as "john.doe" with password "12345"
     And I go to "/dashboard/"
     When I follow "Domain"
     Then I should be on "/domain"
 
+  @fixtures
   Scenario: Logged in user sees an empty domain list at first
     Given I am logged in as "john.doe" with password "12345"
     When I go to "/domain/"
     Then I should see "There are no domains created yet."
 
+  @fixtures
   Scenario: Creating a domain works
     Given I am logged in as "john.doe" with password "12345"
     When I go to "/domain/"
