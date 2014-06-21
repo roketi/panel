@@ -32,12 +32,12 @@ class Domain {
 	/**
 	 * @var boolean
 	 */
-	protected $enableDNS;
+	protected $enableDNS = FALSE;
 
 	/**
 	 * @var boolean
 	 */
-	protected $enableMailService;
+	protected $enableMailService = FALSE;
 
 	/**
 	 * @var \DateTime
@@ -57,9 +57,6 @@ class Domain {
 	 */
 	public function __construct() {
 		$this->createTime = new \DateTime();
-
-		$this->enableDNS = FALSE;
-		$this->enableMailService = FALSE;
 	}
 
 	/**
