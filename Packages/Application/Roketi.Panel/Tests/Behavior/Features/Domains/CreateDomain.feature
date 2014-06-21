@@ -30,3 +30,12 @@ Feature: Creating a domain
     And I should see "Domain created successfully!"
     And I should see "foobar.ch"
 
+  @fixtures
+  Scenario: Creating existing domain again fails
+    Given I am logged in as "john.doe" with password "12345"
+    And there is a domain "foobar.ch"
+    When I go to "/domain/new"
+    And I fill in "foobar.ch" for "newDomainName"
+    And press "Create Domain"
+    Then I should see "Another entity with the same unique identifiers already exists"
+

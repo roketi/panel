@@ -20,6 +20,11 @@ class Domain {
 	protected $idnaConvertService;
 
 	/**
+	 * The domain name.
+	 *
+	 * Has to be unique in the system, therefore this is marked as an identity property. We want to have the possibility
+	 * to change the name later on, therefore it is not made the object persistence identifier for Doctrine.
+	 *
 	 * @var string
 	 */
 	protected $name;
@@ -28,6 +33,7 @@ class Domain {
 	 * The ASCII-only version of this domain name.
 	 *
 	 * @var string
+	 * @Flow\Identity
 	 */
 	protected $punycodeName;
 

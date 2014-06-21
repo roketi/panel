@@ -1,6 +1,7 @@
 <?php
 
-use	Behat\MinkExtension\Context\MinkContext;
+use Behat\Behat\Context\Step;
+use Behat\MinkExtension\Context\MinkContext;
 use PHPUnit_Framework_Assert as Assert;
 
 require_once(__DIR__ . '/../../../../../Flowpack.Behat/Tests/Behat/FlowContext.php');
@@ -62,6 +63,17 @@ class FeatureContext extends MinkContext {
 		if ($this->getSession()->getPage()->findButton('logout')) {
 			Assert::fail('"Logout" Button not expected');
 		}
+	}
+
+	/**
+	 * @Given /^there is a domain "([^"]*)"$/
+	 */
+	public function thereIsADomain($domainName) {
+		return array(
+			new Step\When('I go to "/domain/new"'),
+			new Step\When('I fill in "' . $domainName . '" for "newDomainName"'),
+			new Step\Then('I press "Create Domain"'),
+		);
 	}
 
 }

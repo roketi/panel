@@ -39,6 +39,7 @@ class DomainController extends BaseController {
 	 * Stores a new domain in the repository
 	 *
 	 * @param \Roketi\Panel\Domain\Model\Domain $newDomain
+	 * @Flow\Validate(argumentName="newDomain", type="UniqueEntity")
 	 */
 	public function createAction(\Roketi\Panel\Domain\Model\Domain $newDomain) {
 		$this->domainRepository->add($newDomain);
