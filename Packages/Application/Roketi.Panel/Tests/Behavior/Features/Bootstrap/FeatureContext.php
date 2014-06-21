@@ -16,13 +16,26 @@ class FeatureContext extends MinkContext {
 	protected $objectManager;
 
 	/**
+	 * @var \Flowpack\Behat\Tests\Behat\FlowContext
+	 */
+	protected $flowContext;
+
+	/**
+	 * @var \TYPO3\Flow\Security\AccountRepository
+	 */
+	protected $accountRepository;
+
+
+	/**
 	 * Initializes the context
 	 *
 	 * @param array $parameters Context parameters (configured through behat.yml)
 	 */
 	public function __construct(array $parameters) {
 		$this->useContext('flow', new \Flowpack\Behat\Tests\Behat\FlowContext($parameters));
-		$this->objectManager = $this->getSubcontext('flow')->getObjectManager();
+		$this->flowContext = $this->getSubcontext('flow');
+		$this->objectManager = $this->flowContext->getObjectManager();
+		$this->accountRepository = $this->objectManager->get('TYPO3\Flow\Security\AccountRepository');
 	}
 
 	/**
@@ -35,7 +48,11 @@ class FeatureContext extends MinkContext {
 	/**
 	 * @Given /^I am logged in as "([^"]*)" with password "([^"]*)"$/
 	 */
-	public function iAmLoggedInAsWithPassword($username, $password) {
+	public function iAmLoggedInAsUserWithPassword($username, $password) {
+		$user = $this->accountRepository->findByAccountIdentifierAndAuthenticationProviderName($username, 'DefaultProvider');
+		if (!$user) {
+			$this->flowContext->iRunTheCommand('roketi.panel:setup:createadminuser --username ' . $username . ' --password ' . $password);
+		}
 		$this->visit('/');
 		$this->fillField('username', $username);
 		$this->fillField('password', $password);
