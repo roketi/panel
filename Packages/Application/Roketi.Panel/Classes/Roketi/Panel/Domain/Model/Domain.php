@@ -26,6 +26,7 @@ class Domain {
 	 * to change the name later on, therefore it is not made the object persistence identifier for Doctrine.
 	 *
 	 * @var string
+	 * @Flow\Validate(type="\Roketi\Panel\Domain\Validator\DomainNameValidator")
 	 */
 	protected $name;
 

@@ -39,3 +39,12 @@ Feature: Creating a domain
     And press "Create Domain"
     Then I should see "Another entity with the same unique identifiers already exists"
 
+@fixtures
+  Scenario: Creating a domain with an invalid name is denied and an error is shown
+    Given I am logged in as "john.doe" with password "12345"
+    When I go to "/domain/new"
+    And I fill in "this_is_invalid.demo.example.org" for "newDomainName"
+    And press "Create Domain"
+    Then I should be on "/domain/create"
+    And I should see "The entered domain name is invalid!"
+    And I should see "this_is_invalid.demo.example.org"
