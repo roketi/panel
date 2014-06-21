@@ -125,12 +125,4 @@ class Domain {
 		return $this->createTime;
 	}
 
-	/**
-	 * @param \DateTime $createTime
-	 * @return void
-	 */
-	public function setCreateTime($createTime) {
-		$this->createTime = $createTime;
-	}
-
 }
