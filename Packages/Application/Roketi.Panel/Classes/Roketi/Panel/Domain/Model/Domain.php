@@ -25,9 +25,11 @@ class Domain {
 	protected $name;
 
 	/**
+	 * The ASCII-only version of this domain name.
+	 *
 	 * @var string
 	 */
-	protected $idnaName;
+	protected $punycodeName;
 
 	/**
 	 * @var boolean
@@ -74,18 +76,20 @@ class Domain {
 	public function setName($name) {
 		$this->name = $name;
 
-		$this->idnaName = $this->idnaConvertService->encodeUmlautDomainName($name);
+		$this->punycodeName = $this->idnaConvertService->encodeUmlautDomainName($name);
 	}
 
 	/**
 	 * Returns the IDNA-Version of the domain name (the technically usable domain-name
 	 * with masked umlaut characters).
 	 *
-	 * Returns the same as the regular domain name if there's no difference (e.g. no
-	 * umlaut in the domain name)
+	 * Returns the same as the regular domain name if there's no difference (i.e. no
+	 * umlaut in the domain name).
+	 *
+	 * @return string
 	 */
-	public function getIdnaName() {
-		return $this->idnaName;
+	public function getPunycodeName() {
+		return $this->punycodeName;
 	}
 
 	/**

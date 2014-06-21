@@ -60,7 +60,7 @@ class DomainTest extends \TYPO3\Flow\Tests\UnitTestCase {
 
 		$this->assertEquals(
 			'foobar.com',
-			$this->fixture->getIdnaName()
+			$this->fixture->getPunycodeName()
 		);
 	}
 
@@ -72,7 +72,7 @@ class DomainTest extends \TYPO3\Flow\Tests\UnitTestCase {
 
 		$this->assertEquals(
 			'xn--grezi-lva.ch',
-			$this->fixture->getIdnaName()
+			$this->fixture->getPunycodeName()
 		);
 	}
 
