@@ -14,9 +14,9 @@ class Version20140610221107 extends AbstractMigration {
 	 * @return void
 	 */
 	public function up(Schema $schema) {
-		$this->abortIf($this->connection->getDatabasePlatform()->getName() != "mysql");
+		$this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql');
 
-		$this->addSql("CREATE TABLE roketi_panel_domain_model_domain (persistence_object_identifier VARCHAR(40) NOT NULL, name VARCHAR(255) NOT NULL, idnaname VARCHAR(255) NOT NULL, enabledns TINYINT(1) NOT NULL, enablemailservice TINYINT(1) NOT NULL, createtime DATETIME NOT NULL, PRIMARY KEY(persistence_object_identifier)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB");
+		$this->addSql('CREATE TABLE roketi_panel_domain_model_domain (persistence_object_identifier VARCHAR(40) NOT NULL, name VARCHAR(255) NOT NULL, idnaname VARCHAR(255) NOT NULL, enabledns TINYINT(1) NOT NULL, enablemailservice TINYINT(1) NOT NULL, createtime DATETIME NOT NULL, PRIMARY KEY(persistence_object_identifier)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB');
 	}
 
 	/**
@@ -24,8 +24,8 @@ class Version20140610221107 extends AbstractMigration {
 	 * @return void
 	 */
 	public function down(Schema $schema) {
-		$this->abortIf($this->connection->getDatabasePlatform()->getName() != "mysql");
+		$this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql');
 
-		$this->addSql("DROP TABLE roketi_panel_domain_model_domain");
+		$this->addSql('DROP TABLE roketi_panel_domain_model_domain');
 	}
 }

@@ -14,9 +14,9 @@ class Version20140621203553 extends AbstractMigration {
 	 * @return void
 	 */
 	public function up(Schema $schema) {
-		$this->abortIf($this->connection->getDatabasePlatform()->getName() != "mysql");
+		$this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql');
 
-		$this->addSql("CREATE UNIQUE INDEX flow_identity_roketi_panel_domain_model_domain ON roketi_panel_domain_model_domain (punycodename)");
+		$this->addSql('CREATE UNIQUE INDEX flow_identity_roketi_panel_domain_model_domain ON roketi_panel_domain_model_domain (punycodename)');
 	}
 
 	/**
@@ -24,8 +24,8 @@ class Version20140621203553 extends AbstractMigration {
 	 * @return void
 	 */
 	public function down(Schema $schema) {
-		$this->abortIf($this->connection->getDatabasePlatform()->getName() != "mysql");
+		$this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql');
 
-		$this->addSql("DROP INDEX flow_identity_roketi_panel_domain_model_domain ON roketi_panel_domain_model_domain");
+		$this->addSql('DROP INDEX flow_identity_roketi_panel_domain_model_domain ON roketi_panel_domain_model_domain');
 	}
 }

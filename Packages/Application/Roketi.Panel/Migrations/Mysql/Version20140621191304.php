@@ -14,9 +14,9 @@ class Version20140621191304 extends AbstractMigration {
 	 * @return void
 	 */
 	public function up(Schema $schema) {
-		$this->abortIf($this->connection->getDatabasePlatform()->getName() != "mysql");
+		$this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql');
 
-		$this->addSql("ALTER TABLE roketi_panel_domain_model_domain CHANGE idnaname punycodename VARCHAR(255) NOT NULL");
+		$this->addSql('ALTER TABLE roketi_panel_domain_model_domain CHANGE idnaname punycodename VARCHAR(255) NOT NULL');
 	}
 
 	/**
@@ -24,8 +24,8 @@ class Version20140621191304 extends AbstractMigration {
 	 * @return void
 	 */
 	public function down(Schema $schema) {
-		$this->abortIf($this->connection->getDatabasePlatform()->getName() != "mysql");
+		$this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql');
 
-		$this->addSql("ALTER TABLE roketi_panel_domain_model_domain CHANGE punycodename idnaname VARCHAR(255) NOT NULL");
+		$this->addSql('ALTER TABLE roketi_panel_domain_model_domain CHANGE punycodename idnaname VARCHAR(255) NOT NULL');
 	}
 }
