@@ -122,4 +122,3 @@ class BaseController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 		return FALSE;
 	}
 }
-?>

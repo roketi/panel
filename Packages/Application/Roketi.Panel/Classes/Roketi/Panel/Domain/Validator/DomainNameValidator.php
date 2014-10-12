@@ -108,7 +108,7 @@ class DomainNameValidator extends \TYPO3\Flow\Validation\Validator\AbstractValid
 	private function checkForValidLengthOfSingleLabels() {
 		$labels = explode('.', $this->domainNameToCheck);
 
-		foreach($labels as $label) {
+		foreach ($labels as $label) {
 			if (strlen($label) > 63) {
 				return FALSE;
 			}

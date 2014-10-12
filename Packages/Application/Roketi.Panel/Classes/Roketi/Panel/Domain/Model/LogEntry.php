@@ -20,18 +20,18 @@ class LogEntry {
 	protected $timeStamp;
 
 	/**
-	 * @var \TYPO3\Flow\Security\Account,
+	 * @var \TYPO3\Flow\Security\Account
 	 * @ORM\ManyToOne()
 	 */
 	protected $account;
 
 	/**
-	 * @var string,
+	 * @var string
 	 */
 	protected $remoteIp;
 
 	/**
-	 * @var string,
+	 * @var string
 	 */
 	protected $component;
 
@@ -42,7 +42,7 @@ class LogEntry {
 
 
 	/**
-	 * @return \DateTime,
+	 * @return \DateTime
 	 */
 	public function getTimeStamp() {
 		return $this->timeStamp;
@@ -57,7 +57,7 @@ class LogEntry {
 	}
 
 	/**
-	 * @return \TYPO3\Flow\Security\Account,
+	 * @return \TYPO3\Flow\Security\Account
 	 */
 	public function getAccount() {
 		return $this->account;
@@ -81,7 +81,7 @@ class LogEntry {
 	}
 
 	/**
-	 * @return string,
+	 * @return string
 	 */
 	public function getRemoteIp() {
 		return $this->remoteIp;
@@ -96,7 +96,7 @@ class LogEntry {
 	}
 
 	/**
-	 * @return string,
+	 * @return string
 	 */
 	public function getComponent() {
 		return $this->component;
@@ -124,5 +124,4 @@ class LogEntry {
 	public function setAction($action) {
 		$this->action = $action;
 	}
-
 }

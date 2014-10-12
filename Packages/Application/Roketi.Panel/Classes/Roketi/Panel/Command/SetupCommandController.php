@@ -54,4 +54,3 @@ class SetupCommandController extends \TYPO3\Flow\Cli\CommandController {
 		$this->outputLine('User ' . $username . ' created successfully.');
 	}
 }
-?>

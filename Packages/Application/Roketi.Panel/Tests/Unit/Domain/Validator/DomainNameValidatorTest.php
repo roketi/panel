@@ -97,7 +97,7 @@ class DomainNameValidatorTest extends \TYPO3\Flow\Tests\UnitTestCase {
 	public function isValidRaisesErrorOnTooLongDomainName() {
 		$this->assertHasErrors(
 			$this->fixture->validate('foobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobar' .
-				'foobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobar'.
+				'foobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobar' .
 				'foobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobar' .
 				'foobarfoobarfoobarfoobarfoobarfoobarfoobarfoobarfoobar.com')
 		);
@@ -133,14 +133,15 @@ class DomainNameValidatorTest extends \TYPO3\Flow\Tests\UnitTestCase {
 	 * @test
 	 */
 	public function isValidRaisesErrorOnDomainWithTooManyLabels() {
+		// 128 labels
 		$this->assertHasErrors(
-			$this->fixture->validate('a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x') // 128 labels
+			$this->fixture->validate('a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z.a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x')
 		);
 	}
 
 	/**
 	 * @test
- 	 * @dataProvider invalidDomainNamesWithTooLongLabelsProvider
+	 * @dataProvider invalidDomainNamesWithTooLongLabelsProvider
 	 */
 	public function isValidRaisesErrorOnDomainNameWithTooLongLabel($domainName) {
 		$this->assertHasErrors(
@@ -156,9 +157,12 @@ class DomainNameValidatorTest extends \TYPO3\Flow\Tests\UnitTestCase {
 	 */
 	public function invalidDomainNamesWithTooLongLabelsProvider() {
 		return array(
-			array('foo.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'), // 64 characters
-			array('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.foo'), // 64 characters
-			array('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.foo.bar') // 64 characters
+			// 64 characters
+			array('foo.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
+			// 64 characters
+			array('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.foo'),
+			// 64 characters
+			array('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.foo.bar')
 		);
 	}
 
