@@ -47,4 +47,3 @@ Feature: Creating a domain
     And press "Create Domain"
     Then I should be on "/domain/create"
     And I should see "The entered domain name is invalid!"
-    And I should see "this_is_invalid.demo.example.org"
