@@ -12,6 +12,7 @@ TYPO3:
   Flow:
     persistence:
       backendOptions:
+        host: 'localhost'
         dbname: 'flow'       # adjust to your database name
         user: ''             # adjust to your database user
         password: ''         # adjust to your database password

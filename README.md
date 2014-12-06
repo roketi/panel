@@ -13,7 +13,13 @@ We manage our issues and tasks in JIRA, you can find our installation at https:/
 
 ### Running the Behat Tests
 
-After installing Roketi Panel in your development environment, you need to run the following commands from the root of the installation to prepare your local Behat stuff::
+After installing Roketi Panel in your development environment, you need to configure the DB credentials at three different points (due to the fact how Flow and Behat work together):
+
+- in Configuration/Development/Settings.yaml: Set the database you as the human uses to develop and manually test the application
+- in Configuration/Development/Behat/Settings.yaml: Set the testing database (frontend-tests executed by Behat will use this Flow context)
+- in Configuration/Testing/Behat/Settings.yaml: Set the testing database (Behat will use this Flow context for it's internal "communication" to the database (e.g. cleaning up before executing tests)
+
+Now you're ready to run the following commands from the root of the installation to prepare your local Behat stuff::
 
 	./flow behat:kickstart
 

@@ -1,4 +1,3 @@
-# Settings for the Behat-Tests
 TYPO3:
   Flow:
     persistence:
