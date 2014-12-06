@@ -56,3 +56,6 @@ script:
     - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 #   - phpunit -c Build/BuildEssentials/PhpUnit/FunctionalTests.xml
     - bin/behat -c Packages/Application/Roketi.Panel/Tests/Behavior/behat.yml -v
+
+notifications:
+  slack: roketi:IdZSgbPv9asoeiUUAssydJ58
