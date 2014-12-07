@@ -97,8 +97,9 @@ class BaseController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 	 * to translate a label from another collection, just provide the collection's
 	 * name as the second parameter.
 	 *
-	 * @param string the ID of the translation unit to be looked up
-	 * @param string the name of the collection to look up the label, optional, defaults to 'Main'
+	 * @param string $id the ID of the translation unit to be looked up
+	 * @param string $collectionName the name of the collection to look up the label, optional, defaults to 'Main'
+	 * 
 	 * @return string the localized label or the ID if no matching localization found
 	 */
 	protected function translate($id, $collectionName = 'Main') {
