@@ -6,8 +6,6 @@ namespace Roketi\Panel\Controller;
  *                                                                        *
  *                                                                        */
 
-use TYPO3\Flow\Annotations as Flow;
-
 class StandardController extends BaseController {
 
 	/**

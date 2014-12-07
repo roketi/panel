@@ -29,6 +29,8 @@ class IdnaConvertService {
 
 	/**
 	 * Encodes a domain name with/without umlauts to it's punycode equivalent.
+	 *
+	 * @param $domainNameWithUmlauts the domain name to convert
 	 */
 	public function encodeUmlautDomainName($domainNameWithUmlauts) {
 		return $this->idnaConverter->encode($domainNameWithUmlauts);
