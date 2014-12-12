@@ -21,7 +21,7 @@
 				<f:for each="{entries}" as="entry">
 					<tr>
 						<td>
-							<f:format.date format="Y-m-d H:m:i">{entry.timeStamp}</f:format.date>
+							<f:format.date format="Y-m-d H:i:s">{entry.timeStamp}</f:format.date>
 						</td>
 						<td>
 							<f:translate id="{entry.component}_{entry.action}" source="Log" arguments="{0: entry.account.accountIdentifier}"/>
