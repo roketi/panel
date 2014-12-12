@@ -7,7 +7,7 @@ use PHPUnit_Framework_Assert as Assert;
 require_once(__DIR__ . '/../../../../../Flowpack.Behat/Tests/Behat/FlowContext.php');
 
 /**
- * Features context
+ * Features context for Roketi Panel Behat Tests
  */
 class FeatureContext extends MinkContext {
 	/**
@@ -92,5 +92,4 @@ class FeatureContext extends MinkContext {
 			new Step\Then('I press "Create Domain"'),
 		);
 	}
-
 }

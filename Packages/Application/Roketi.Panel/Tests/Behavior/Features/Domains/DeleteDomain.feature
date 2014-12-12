@@ -1,4 +1,3 @@
-@new
 Feature: Delete a domain
   As an administrator I want to be able to delete a domain.
 
