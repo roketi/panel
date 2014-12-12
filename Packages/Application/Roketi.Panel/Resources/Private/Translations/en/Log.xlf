@@ -16,6 +16,9 @@
 			<trans-unit id="domain_domain_created">
 				<source>Domain created</source>
 			</trans-unit>
+			<trans-unit id="domain_domain_deleted">
+				<source>Domain deleted</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

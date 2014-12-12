@@ -31,4 +31,17 @@ class DomainAspect {
 			'domain_created'
 		);
 	}
+
+	/**
+	 * Logs deletion of a new domain
+	 *
+	 * @Flow\After("method(Roketi\Panel\Controller\DomainController->deleteAction())")
+	 * @return mixed
+	 */
+	public function logDomainDeletion() {
+		$this->loggingService->log(
+			'domain',
+			'domain_deleted'
+		);
+	}
 }

@@ -7,6 +7,9 @@
 			<trans-unit id="message.created_successfully">
 				<source>Domain created successfully!</source>
 			</trans-unit>
+			<trans-unit id="message.deleted_successfully">
+				<source>Domain deleted successfully!</source>
+			</trans-unit>
 			<trans-unit id="message.error_invalid_domain_name">
 				<source>The entered domain name is invalid!</source>
 			</trans-unit>

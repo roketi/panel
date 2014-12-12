@@ -49,4 +49,20 @@ class DomainController extends BaseController {
 		);
 		$this->redirect('index');
 	}
+
+	/**
+	 * Deletes a domain from the system
+	 *
+	 * @param \Roketi\Panel\Domain\Model\Domain $domain
+	 * @throws \TYPO3\Flow\Persistence\Exception\IllegalObjectTypeException
+	 */
+	public function deleteAction(\Roketi\Panel\Domain\Model\Domain $domain) {
+		$this->domainRepository->remove($domain);
+
+		$this->addFlashMessage(
+			$this->translate('message.deleted_successfully', 'Domain')
+		);
+
+		$this->redirect('index');
+	}
 }
